@@ -1,0 +1,99 @@
+.book-appointment {
+  min-height: calc(100vh - 70px);
+  padding: 40px 0;
+}
+
+.page-title {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.doctors-section h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.booking-section {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+}
+
+.selected-doctor h2 {
+  color: #1f2937;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.selected-doctor .btn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.booking-form-container h2 {
+  color: #1f2937;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.booking-summary {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.fee {
+  font-size: 20px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.included {
+  color: #10b981;
+  font-weight: 600;
+}
+
+@media (max-width: 968px) {
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+}
