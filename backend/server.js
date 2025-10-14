@@ -7,7 +7,7 @@ const { initDatabase } = require('./config/database');
 
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5432;
 const _dirname = path.resolve();
 
 // Create uploads directory if it doesn't exist
