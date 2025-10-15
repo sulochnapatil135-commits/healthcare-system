@@ -49,9 +49,9 @@ export const appointmentsAPI = {
 // Prescriptions API
 export const prescriptionsAPI = {
   upload: (formData) => api.post('/prescriptions/upload', formData, {
-    headers: {
+   /* headers: {
       'Content-Type': 'multipart/form-data',
-    },
+    },*/
   }),
   get: (appointmentId) => api.get(`/prescriptions/${appointmentId}`),
   download: (prescriptionId) => api.get(`/prescriptions/download/${prescriptionId}`, {

@@ -2,6 +2,11 @@ const { pool } = require('../config/database');
 const path = require('path');
 const fs = require('fs');
 
+
+const uploadsDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+}
 // Upload prescription
 exports.uploadPrescription = async (req, res) => {
     try {
@@ -15,7 +20,9 @@ exports.uploadPrescription = async (req, res) => {
             return res.status(400).json({ error: 'Appointment ID is required' });
         }
 
-        const file_path = `/uploads/${req.file.filename}`;
+
+        //const file_path = `/uploads/${req.file.filename}`;
+        const file_path = path.join(uploadsDir, req.file.filename);
         const file_name = req.file.originalname;
 
         const result = await pool.query(
